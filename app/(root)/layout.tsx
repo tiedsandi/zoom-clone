@@ -1,7 +1,11 @@
-import React, {ReactNode} from 'react';
+import {ReactNode} from 'react';
 
-const RootLayout = ({children}: {children: ReactNode}) => {
-  return <main>{children}</main>;
+const RootLayout = ({children}: Readonly<{children: ReactNode}>) => {
+  return (
+    <main>
+      <div>{children}</div>
+    </main>
+  );
 };
 
 export default RootLayout;
